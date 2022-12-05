@@ -4,8 +4,10 @@ import TaskList from "../Components/TaskForm/TaskList";
 
 function ToDo() {
 	return (
-		<>
+		<>	
+			
 			<TaskForm />
+			
 			<TaskList />
 		</>
 	);

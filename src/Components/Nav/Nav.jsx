@@ -8,7 +8,7 @@ function Nav() {
 				<NavContainer>
 					<NavStyledLink to="/home">Home</NavStyledLink>
 					<NavStyledLink to="/todo">To Do</NavStyledLink>
-					<NavStyledLink to="/pokemon">Pokemon</NavStyledLink>
+					<NavStyledLink to="/pokemon">Pokedex</NavStyledLink>
 				</NavContainer>
 			</NavDivisor>
 		</Navbar>
