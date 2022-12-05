@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from "react-router-dom";
+import ToDo from "./Routes/ToDo";
+import Home from "./Routes/Home";
+import Pokemon from "./Routes/Pokemon";
+import Nav from "./Components/Nav/Nav";
+import { TaskContext } from "./Context/TaskContext";
+import { QueryClientProvider, QueryClient } from "react-query";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				staleTime: Infinity,
+				cacheTime: 5000,
+			},
+		},
+	});
+
+	return (
+		<QueryClientProvider client={queryClient}>
+			<TaskContext>
+				<Nav />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="home" element={<Navigate to="/" />} />
+					<Route path="todo" element={<ToDo />} />
+					<Route path="pokemon" element={<Pokemon />} />
+				</Routes>
+			</TaskContext>
+		</QueryClientProvider>
+	);
 }
 
 export default App;
