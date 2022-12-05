@@ -17,7 +17,7 @@ export const NavContainer = styled.nav`
   max-width: 1300px;
   gap: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
@@ -29,8 +29,11 @@ export const NavDivisor = styled.div`
 `;
 
 export const NavStyledLink = styled(StyledLink)`
+  font-weight: 500;
+  font-size: 20px;
   transition: all 0.5s 0s ease;
   &:hover {
+    font-weight: 700;
     transform: scale(1.15);
   }
 `;

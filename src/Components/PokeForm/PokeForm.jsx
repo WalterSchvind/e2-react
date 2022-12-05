@@ -6,14 +6,14 @@ import { useQuery } from "react-query";
 import axios from "axios";
 
 function PokeForm() {
-	const pokeRef = useRef("Charmander");
+	const pokeRef = useRef("Lugia");
 	const { setPokemon } = useContext(PokemonContext);
 	const [error, setError] = useState(false);
 	const [textError, setTextError] = useState("Pokemon inválido");
 
-	const fetchPokemon = (pokemon = "Charmander") => {
+	const fetchPokemon = (pokemon = "Lugia") => {
 		if (!pokemon) {
-			pokemon = "Charmander";
+			pokemon = "Lugia";
 		}
 		pokemon = pokemon.toLowerCase();
 		return axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);

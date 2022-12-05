@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { HiTrash } from "react-icons/hi";
+import { HiBan } from "react-icons/hi";
 
 export const Form = styled.form`
   display: flex;
@@ -41,7 +41,7 @@ export const TrashButton = styled.button`
   border: none;
 `;
 
-export const Trash = styled(HiTrash)`
+export const Delete = styled(HiBan)`
   margin: 5px;
   font-size: 20px;
   cursor: pointer;

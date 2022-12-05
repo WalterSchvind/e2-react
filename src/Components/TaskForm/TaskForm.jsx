@@ -8,7 +8,7 @@ import {
 	Input,
 	InputContainer,
 	SendButton,
-	Trash,
+	Delete,
 	TrashButton,
 } from "../FormStyles";
 
@@ -85,7 +85,7 @@ function TaskForm() {
 					<FiArrowRight />
 				</SendButton>
 				<TrashButton type="button" onClick={removeAll}>
-					<Trash />
+					<Delete />
 				</TrashButton>
 			</InputContainer>
 			{!valid && <Error>{error}</Error>}

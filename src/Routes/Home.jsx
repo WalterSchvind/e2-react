@@ -17,20 +17,20 @@ function Home() {
 				{tasks.length > 0 && (
 					<>
 						<StyledLink to="/todo">
-							<ButtonWithTask>To Do</ButtonWithTask>
+							<ButtonWithTask>To Do List</ButtonWithTask>
 						</StyledLink>
 						<StyledLink to="/pokemon">
-							<ButtonWithTask>Pokemon</ButtonWithTask>
+							<ButtonWithTask>Pokemon Searcher</ButtonWithTask>
 						</StyledLink>
 					</>
 				)}
 				{tasks.length === 0 && (
 					<>
 						<StyledLink to="/todo">
-							<ButtonWithoutTask>To Do</ButtonWithoutTask>
+							<ButtonWithoutTask>To Do List</ButtonWithoutTask>
 						</StyledLink>
 						<StyledLink to="/pokemon">
-							<ButtonWithoutTask>Pokemon</ButtonWithoutTask>
+							<ButtonWithoutTask>Pokemon Searcher</ButtonWithoutTask>
 						</StyledLink>
 					</>
 				)}

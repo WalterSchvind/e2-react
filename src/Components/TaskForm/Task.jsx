@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import { Context } from "../../Context/TaskContext";
 import { saveLocalStorage } from "../../utils/localStorage";
 import { SubContainer, TaskContainer, TaskText } from "./TaskStyles";
-import { Trash } from "../FormStyles";
+import { Delete } from "../FormStyles";
 
 function Task(props) {
 	const { tasks, setTasks } = useContext(Context);
@@ -16,7 +16,7 @@ function Task(props) {
 	return (
 		<TaskContainer>
 			<SubContainer>
-				<Trash onClick={handleRemove} />
+				<Delete onClick={handleRemove} />
 				<TaskText>{props.title}</TaskText>
 			</SubContainer>
 		</TaskContainer>
